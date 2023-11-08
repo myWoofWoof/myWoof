@@ -373,7 +373,13 @@ header, .othercases {
 }
 
 .dot-color span{
-    font-size: 200px;
-    margin: 0;
-    padding: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+.dot-color p:first-child{
+    background-color: red;
+}
+.dot-color p:last-child{
+    background-color: black;
 }
