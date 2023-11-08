@@ -1,0 +1,379 @@
+/* h1 {
+    color: coral;        
+    padding: 10px 100px;
+    }
+span{
+    color: blue;
+}
+a{
+    color: chartreuse;
+    text-decoration: none;
+}
+.circle {
+    border: 2px solid red;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+.circle-img {
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    height: 100%;
+}
+.box-circle {
+    display: flex;
+    justify-content: space-between;
+}
+.title {
+    display: flex;
+    justify-content: center;
+}
+.button {
+    color: rgb(255, 255, 255);
+    background-color: lightcoral;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: none;
+   
+}
+.circle-btn {
+    text-align: center;
+}
+h4 {
+    margin: 10px 0px 20px 0px;
+} */
+
+.bg-primary {
+    background: linear-gradient(60deg, rgba(189, 215, 255, 1) 0%, rgba(251, 144, 155, 1) 100%);
+    color: #FFFFFF;
+}
+
+.bg-secondary {
+    background: #E2E3E7;
+}
+
+.msg-width-primary {
+    width: max-content;
+}
+
+.msg-width-secondary {
+    width: 350px;
+}
+
+.main {
+    margin: 30px 70px;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+:root {
+    --custom-color: linear-gradient(360deg, rgba(51, 61, 96, 1) 0%, rgba(53, 56, 63, 1) 100%);
+}
+
+a {
+    text-decoration: none;
+}
+
+.fullLogo {
+    display: flex;
+    align-items: center;
+}
+
+header, .othercases {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.othercases-right{
+    text-align: right;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: rgb(51, 61, 96);
+}
+
+.othercases-left{
+    text-align: left;font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: rgb(51, 61, 96);
+}
+
+.widthcases{
+    width: 700px;
+    margin: 20px auto;
+}
+.myWoof-img {
+    width: 30%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.myWoofAcceptMyCare {
+    text-align: center;
+    margin-left: 17px;
+}
+
+.myWoof {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    margin: 0;
+}
+
+.acceptMyCare {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13.5px;
+    margin: 0;
+}
+
+.menu {
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.super {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.myWoofBig {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    letter-spacing: -4.5px;
+    font-size: 150px;
+    margin: 0;
+    width: 700px;
+}
+
+.default {
+    color: rgb(51, 61, 96);
+    color: linear-gradient(360deg, rgba(51, 61, 96, 1) 0%, rgba(53, 56, 63, 1) 100%);
+}
+
+.woof {
+    background: linear-gradient(60deg, rgba(189, 215, 255, 1) 0%, rgba(251, 144, 155, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.superhero {
+    width: 600px;
+}
+
+.description {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    margin: 20px 0;
+    line-height: 141.4%
+}
+
+.circle {
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(60deg, rgba(189, 215, 255, 1) 0%, rgba(251, 144, 155, 1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.solution{
+    text-align: center;
+}
+
+.solution p{
+    width: 120px;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: rgb(51, 61, 96);
+
+}
+
+.right{
+    margin-left: 56%;
+}
+
+
+.circle-min {
+    width: 150px;
+    height: 150px;
+}
+
+.circle-max {
+    width: 200px;
+    height: 200px;
+}
+
+.jumpingWoofy {
+    width: 100%;
+    object-fit: cover;
+}
+
+.situations, .othersituations{
+    width: 70%;
+    object-fit: cover;
+}
+
+
+
+.button {
+    background: linear-gradient(60deg, rgba(189, 215, 255, 1) 0%, rgba(251, 144, 155, 1) 100%);
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+
+}
+
+.rescueMechanism {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.benefits {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.benefits p:last-child {
+    color: #35383F;
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+
+}
+
+.benefits p:first-child {
+    font-size: 40px;
+    font-weight: bold;
+    margin-right: 10px;
+    font-family: 'Roboto Mono', monospace;
+    color: rgb(51, 61, 96);
+    color: var (--custom-color)
+}
+
+
+.greyStrip {
+
+    background: #E9EAEC
+}
+
+.howItWorks {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 70px;
+    margin: 20px 0;
+    line-height: 141.4%
+}
+
+.doggy {
+    width: 40%;
+    object-fit: cover;
+}
+
+.strip {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1360px;
+}
+
+.free {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 150px;
+    line-height: 75.9%;
+    letter-spacing: -4.5px;
+    color: #F0F1F3;
+    color: linear-gradient(360deg, #F0F1F3 (51, 61, 96, 1) 0%, #F3F4F6 (53, 56, 63, 1) 100%);
+}
+
+.icon {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: rgb(51, 61, 96);
+}
+
+.line {
+    display: flex;
+    justify-content: space-between;
+}
+
+.line .icon p:last-child {
+    font-size: 14px;
+}
+
+.message {
+    border-radius: 30px;
+    padding: 20px 20px;
+    border: none;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+.cases{
+    display: flex;
+    justify-content:space-between;
+    margin: 70px 0;
+}
+.messanger {
+    width: 900px;
+    margin: 70px auto;
+}
+
+.products{
+    background-color: #F5F8FF;
+    display: flex;
+    justify-content:space-between;
+    margin: 70px 0;
+    padding: 150px;
+}
+
+.product-img {
+    width: 80%;
+}
+
+.stars span{
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    margin: 0px 20px 0 5px;
+}
+.stars{
+    margin-top: 70px;
+}
+
+.price span{
+    text-decoration: line-through; 
+}
+
+.dot-color span{
+    font-size: 200px;
+    margin: 0;
+    padding: 0;
+}
