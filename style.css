@@ -454,6 +454,7 @@ header {
 }
 .happy-story .title {
     font-family: var(--font-roboto);
+    font-weight: 100;
     font-size: 70px;
     text-align: center;
     margin: 50px 0;
@@ -499,20 +500,67 @@ header {
 
 
 
-.video, .friendly{
+.video, .friendly, .partners{
     text-align: center; 
+    margin-top: 100px;
+    margin-bottom: 200px;
 }
-.video .title, .friendly .title{
+.video .title, .friendly .title, .partners .title{
     font-family: var(--font-roboto);
+    font-weight: 100;
     font-size: 70px;
     text-align: center;
-    margin: 50px 0;
+    margin: 50px 0 20px 0;
 }
 .video .subtitle, .friendly .subtitle{
     font-family: var(--font-roboto);
     font-weight: 300;
     font-size: 14px;
-    margin: 20px auto;
+    margin: 0 auto;
     line-height: 141.4%;
-    max-width: 700px;
+    max-width: 600px;
+}
+.video .reels, .friendly .insta, .partners .list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    max-width: 950px;
+    width: 100%;
+    margin: 40px auto;
+}
+
+.friendly .hashtag {
+    font-size: 40px;
+    margin-top: 20px;
+    font-weight: var(--font-roboto);
+    font-weight: 600;
+}
+
+.friendly .insta .insta-img {
+    max-width: 250px;
+    margin-bottom: 50px;
+}
+
+.partners .list .partners-img{
+    width: 150px;
+    object-fit: contain;
+}
+
+.partners .list .partners-img:first-child, 
+.partners .list .partners-img:last-child {
+    width: 220px;
+    object-fit: contain;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: var(--Linear, linear-gradient(180deg, #35383F 0%, #333D60 100%));
+    color: white;
+    padding: 70px;
+}
+footer .blocks {
+    display: flex;
+    justify-content: space-around;
 }
