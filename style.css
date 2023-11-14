@@ -24,7 +24,8 @@
 }
 
 .msg-width-primary {
-  width: max-content;
+  max-width: 350px;
+  width: 100%;
 }
 
 .msg-width-secondary {
@@ -37,8 +38,13 @@
   margin: 0 auto;
 }
 
-body {
+* {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  padding: 0 10px;
 }
 
 a {
@@ -93,6 +99,14 @@ header {
   font-size: 14px;
   color: rgb(51, 61, 96);
 }
+.othercases-left-2 {
+  max-width: 200px;
+  width: 100%;
+}
+.othercases-left-3 {
+  max-width: 260px;
+  width: 100%;
+}
 
 .widthcases {
   display: flex;
@@ -102,11 +116,12 @@ header {
   max-width: 700px;
   width: 100%;
   margin: 20px auto;
-  min-width: 650px;
+  min-width: 100px;
 }
 @media (max-width: 600px) {
   .widthcases {
     flex-direction: column;
+    gap: 15px;
   }
 }
 
@@ -275,6 +290,12 @@ header {
   margin-top: 70px;
   flex-wrap: wrap;
 }
+@media (max-width: 1150px) {
+  .rescueMechanism {
+    justify-content: center;
+    gap: 20px;
+  }
+}
 
 .benefits {
   display: flex;
@@ -344,7 +365,7 @@ header {
 
 @media (min-width: 1360px) {
   .free {
-    font-size: 130px;
+    font-size: 150px;
   }
 }
 
@@ -396,8 +417,15 @@ header {
   padding: 150px;
 }
 
-@media (max-width: 900px) {
+.d-none-desktop {
+  display: none;
+}
+@media (max-width: 1300px) {
   .products {
+    display: flex;
+    flex-direction: column-reverse;
+    align-content: center;
+
     padding: 5px;
   }
 
@@ -408,12 +436,23 @@ header {
     width: 100%;
     margin: 0 auto;
   }
+  .d-none-mobil {
+    display: none;
+  }
+  .d-none-desktop {
+    display: block;
+  }
 }
 
 .product-img {
   max-width: 350px;
   width: 100%;
 }
+/* .review {
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+} */
 
 .stars {
   display: flex;
@@ -444,10 +483,9 @@ header {
   display: flex;
   justify-content: space-between;
   text-align: center;
-  margin: 20px 0;
   max-width: 400px;
   font-family: var(--font-roboto);
-  margin: 0 auto;
+  margin: 20px auto;
 }
 
 .wrapper-price .price p {
@@ -502,12 +540,33 @@ header {
 }
 
 .happy-story {
-  background-image: url("./img/happy_story_dogs.png");
-  object-fit: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
   width: 100%;
   height: 100%;
   padding: 50px 0;
+  align-items: center;
+  background: url("./img/happy_story_dogs.png") center / cover no-repeat;
 }
+.happy-story::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(270.6deg, #fb909b 8.08%, #bdd7ff 99.72%);
+  opacity: 0.8;
+  z-index: 1;
+}
+.happy-story > * {
+  position: relative;
+  z-index: 2;
+}
+
 .happy-story .title {
   font-family: var(--font-roboto);
   font-weight: 100;
