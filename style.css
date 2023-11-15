@@ -172,7 +172,7 @@ header {
   font-weight: 800;
   letter-spacing: -4.5px;
   /* font-size: 150px; */
-  font-size: 500%;
+  font-size: 800%;
   margin: 0;
   max-width: 700px;
   width: 100%;
@@ -284,6 +284,7 @@ header {
   font-size: 14px;
   font-family: var(--font-roboto);
   font-weight: 400;
+  cursor: pointer;
 }
 
 .rescueMechanism {
@@ -325,6 +326,7 @@ header {
 
 .greyStrip {
   background: #e9eaec;
+  padding: 5px;
 }
 
 .howItWorks {
@@ -546,6 +548,12 @@ header {
   height: 20px;
   border-radius: 50%;
   margin-right: 5px;
+  border: 2px solid transparent; /* Add a transparent border to all color dots */
+  box-sizing: border-box; /* Include the border in the calculation of the element's dimensions */
+}
+
+.color-dot.selected {
+  border: 2px solid black; /* Add a black border to the selected color dot */
 }
 /* color */
 
