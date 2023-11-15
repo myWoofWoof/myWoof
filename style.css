@@ -123,7 +123,8 @@ header {
     flex-direction: column;
     gap: 15px;
   }
-  .othercases-right, .othercases-left {
+  .othercases-right,
+  .othercases-left {
     text-align: center;
   }
 }
@@ -533,7 +534,7 @@ header {
 }
 
 .size-option.selected::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 2px;
@@ -556,7 +557,84 @@ header {
   border: 2px solid black; /* Add a black border to the selected color dot */
 }
 /* color */
+/* star modal */
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal h2{
+  font-family: var(--font-roboto);
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 141.4%;
+}
+@media (max-width: 900px) {
+  .modal h2{
+    font-size: 18px;
+  }
+}
+/* Modal Content/Box */
+.modal-content {
+  max-width: 550px;
+  width: 70%;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  background-color: #fefefe;
+  border-radius: 10px;
+  text-align: center;
+}
 
+/* Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: -12px;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Input Fields */
+input[type="text"] {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Submit Button */
+#submitBtn {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#submitBtn:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+/* end modal */
 .wrapper-price .size {
   display: flex;
   justify-content: space-between;
@@ -663,8 +741,8 @@ header {
   margin-top: 100px;
   /* margin-bottom: 200px; */
 }
-.partners{
-    margin-bottom: 100px;
+.partners {
+  margin-bottom: 100px;
 }
 .video .title,
 .friendly .title,
@@ -677,8 +755,8 @@ header {
 }
 @media (max-width: 900px) {
   .video .title,
-.friendly .title,
-.partners .title {
+  .friendly .title,
+  .partners .title {
     font-size: 50px !important;
   }
 }
@@ -753,14 +831,18 @@ footer .blocks {
   justify-content: space-around;
 }
 
-footer .blocks .pages,footer .blocks .shops, footer .blocks .contacts{
+footer .blocks .pages,
+footer .blocks .shops,
+footer .blocks .contacts {
   margin-bottom: 20px;
 }
 
-footer .blocks .pages p,footer .blocks .shops p, footer .blocks .contacts p{
+footer .blocks .pages p,
+footer .blocks .shops p,
+footer .blocks .contacts p {
   margin-top: 10px;
 }
-footer .license{
+footer .license {
   margin-top: 50px;
 }
 
@@ -769,14 +851,6 @@ footer .license{
     flex-direction: column;
   }
 }
-
-
-
-
-
-
-
-
 
 /* Оформление панели */
 #side-checkbox {
@@ -787,19 +861,19 @@ footer .license{
   z-index: 999999;
   top: 0;
   left: -360px;
-  background: #337AB7;
-  transition: all 0.5s;   
+  background: #337ab7;
+  transition: all 0.5s;
   width: 320px;
   height: 100vh;
-  box-shadow: 10px 0 20px rgba(0,0,0,0.4);
-  color: #FFF;
+  box-shadow: 10px 0 20px rgba(0, 0, 0, 0.4);
+  color: #fff;
   padding: 40px 20px;
 }
 .side-title {
   font-size: 20px;
   padding-bottom: 10px;
   margin-bottom: 20px;
-  border-bottom: 2px solid #BFE2FF;
+  border-bottom: 2px solid #bfe2ff;
 }
 /* Оформление кнопки на странице */
 .side-button-1-wr {
@@ -815,18 +889,18 @@ footer .license{
   font-size: 20px;
   line-height: 20px;
   padding: 12px 30px;
-  color: #FFF;
+  color: #fff;
   font-weight: bold;
-  text-transform: uppercase; 
-  font-family: 'Roboto', Тahoma, sans-serif;
-  background: #337AB7;
-  cursor: pointer; 
-  border: 2px solid #BFE2FF;
+  text-transform: uppercase;
+  font-family: "Roboto", Тahoma, sans-serif;
+  background: #337ab7;
+  cursor: pointer;
+  border: 2px solid #bfe2ff;
 }
 .side-button-1 .side-b:hover,
 .side-button-1 .side-b:active,
 .side-button-1 .side-b:focus {
-  color: #FFF;
+  color: #fff;
 }
 .side-button-1 .side-b:after,
 .side-button-1 .side-b:before {
@@ -858,10 +932,18 @@ footer .license{
 .side-button-1 .side-close {
   display: none;
 }
-#side-checkbox:checked + .side-panel + .side-button-1-wr .side-button-1 .side-open {
+#side-checkbox:checked
+  + .side-panel
+  + .side-button-1-wr
+  .side-button-1
+  .side-open {
   display: none;
 }
-#side-checkbox:checked + .side-panel + .side-button-1-wr .side-button-1 .side-close {
+#side-checkbox:checked
+  + .side-panel
+  + .side-button-1-wr
+  .side-button-1
+  .side-close {
   display: block;
 }
 #side-checkbox:checked + .side-panel {
@@ -877,10 +959,10 @@ footer .license{
   right: 8px;
   cursor: pointer;
   transform: rotate(45deg);
-  color: #BFE2FF;    
-  transition: all 280ms ease-in-out;    
+  color: #bfe2ff;
+  transition: all 280ms ease-in-out;
 }
 .side-button-2:hover {
-  transform: rotate(45deg) scale(1.1);    
-  color: #FFF;
+  transform: rotate(45deg) scale(1.1);
+  color: #fff;
 }

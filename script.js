@@ -3,6 +3,7 @@ const colorOptions = document.querySelectorAll(".color-option");
 const priceText = document.querySelector(".price p");
 const sellText = document.querySelector(".price span");
 let selectedColor = null;
+window.selectedInfo = {};
 
 sizeOptions.forEach((sizeOption) => {
   if (sizeOption.textContent === "S") {
@@ -29,7 +30,7 @@ function showColorsBySize(size) {
             dot.classList.remove("selected");
           });
           this.classList.add("selected");
-          selectedColor = this; // Обновляем выбранный цвет
+          selectedColor = this; // Update the selected color
         });
         colorOption.appendChild(dot);
       });
@@ -70,19 +71,56 @@ sizeOptions.forEach((sizeOption) => {
 });
 
 const buyButton = document.getElementById("buyButton");
+const modal = document.getElementById("myModal");
+const closeBtn = modal.querySelector(".close");
+const submitBtn = modal.querySelector("#submitBtn");
 
 buyButton.addEventListener("click", function () {
+  modal.style.display = "block";
   const selectedSize = document.querySelector(".size-option.selected");
   const selectedColorOption = document.querySelector(".color-option[data-size='" + selectedSize.textContent + "'] .color-dot.selected");
 
-  window.selectedInfo = {
+
+  selectedInfo = {
     title: "Поводок My Woof",
     color: selectedColorOption.style.backgroundColor,
     size: selectedSize.textContent,
   };
-
-  // console.log(selectedInfo);
-
-
 });
 
+closeBtn.addEventListener("click", function () {
+  modal.style.display = "none";
+});
+
+const phoneInput = document.getElementById("phoneInput");
+phoneInput.addEventListener('keypress', function(e) {
+  const key = String.fromCharCode(!e.charCode ? e.which : e.charCode);
+  const regex = /^[0-9()+-]+$/;
+  if (!regex.test(key)) {
+     e.preventDefault();
+     return false;
+  }
+});
+
+phoneInput.addEventListener('input', function() {
+  const phoneRegex = /^[0-9()+-]*$/; // Regular expression to allow numbers, '+', '-', '(' and ')'
+  if (!phoneRegex.test(phoneInput.value)) {
+    phoneInput.style.color = 'red';
+  } else {
+    phoneInput.style.color = 'black';
+  }
+});
+
+submitBtn.addEventListener("click", function () {
+  const nameInput = document.getElementById("nameInput").value;
+  const phoneRegex = /^[0-9()+-]+$/; // Regular expression to allow numbers, '+', '-', '(' and ')'
+
+  if (phoneRegex.test(phoneInput.value)) { // Validate phone number using regular expression
+    selectedInfo.phone = phoneInput.value;
+    selectedInfo.name = nameInput;
+    console.log(selectedInfo);
+    modal.style.display = "none";
+  } else {
+    phoneInput.style.color = 'red';
+  }
+});
