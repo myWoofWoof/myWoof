@@ -569,10 +569,21 @@ header {
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
 }
-
+.modal h2{
+  font-family: var(--font-roboto);
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 141.4%;
+}
+@media (max-width: 900px) {
+  .modal h2{
+    font-size: 18px;
+  }
+}
 /* Modal Content/Box */
 .modal-content {
-  width: 40%;
+  max-width: 550px;
+  width: 70%;
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
