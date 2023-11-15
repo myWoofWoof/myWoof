@@ -546,6 +546,12 @@ header {
   height: 20px;
   border-radius: 50%;
   margin-right: 5px;
+  border: 2px solid transparent; /* Add a transparent border to all color dots */
+  box-sizing: border-box; /* Include the border in the calculation of the element's dimensions */
+}
+
+.color-dot.selected {
+  border: 2px solid black; /* Add a black border to the selected color dot */
 }
 /* color */
 

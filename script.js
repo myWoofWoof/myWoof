@@ -2,7 +2,8 @@ const sizeOptions = document.querySelectorAll('.size-option');
 const colorOptions = document.querySelectorAll('.color-option');
 const priceText = document.querySelector('.price p');
 const sellText = document.querySelector('.price span');
-// Устанавливаем размер "S" в качестве выбранного по умолчанию
+let selectedColor = null;
+
 sizeOptions.forEach(sizeOption => {
   if (sizeOption.textContent === "S") {
     sizeOption.classList.add('selected');
@@ -10,22 +11,32 @@ sizeOptions.forEach(sizeOption => {
 });
 
 function showColorsBySize(size) {
-  colorOptions.forEach(colorOption => {
-    colorOption.style.display = 'none';
-    if (colorOption.dataset.size === size) {
-      colorOption.style.display = 'flex';
-      const colors = colorOption.dataset.colors.split(',');
-      colorOption.innerHTML = '';
-      colors.forEach(color => {
-        const dot = document.createElement('div');
-        dot.style.backgroundColor = color;
-        dot.classList.add('color-dot');
-        colorOption.appendChild(dot);
-      });
-    }
-  });
+    colorOptions.forEach(colorOption => {
+      colorOption.style.display = colorOption.dataset.size === size ? 'flex' : 'none';
+      if (colorOption.style.display === 'flex') {
+        colorOption.innerHTML = '';
+        colorOption.dataset.colors.split(',').forEach((color, index) => {
+          const dot = document.createElement('div');
+          dot.style.backgroundColor = color;
+          dot.classList.add('color-dot');
+          if (index === 0) {
+            dot.classList.add('selected');
+            selectedColor = dot; // Сохраняем выбранный цвет как активный класс
+          }
+          dot.addEventListener('click', function() {
+            // Убираем активный класс у предыдущего выбранного цвета
+            colorOption.querySelectorAll('.color-dot').forEach(dot => {
+              dot.classList.remove('selected');
+            });
+            this.classList.add('selected');
+            selectedColor = this; // Обновляем выбранный цвет
+          });
+          colorOption.appendChild(dot);
+        });
+      }
+    });
+  
 
-  // Меняем цену в зависимости от выбранного размера
   switch (size) {
     case 'S':
       priceText.textContent = '$49.00';
@@ -44,7 +55,6 @@ function showColorsBySize(size) {
   }
 }
 
-// Показываем цвета и меняем цену при загрузке страницы
 showColorsBySize('S');
 
 sizeOptions.forEach(sizeOption => {
@@ -54,5 +64,6 @@ sizeOptions.forEach(sizeOption => {
     }
     this.classList.add('selected');
     showColorsBySize(this.textContent);
+    selectedColor = null;
   });
 });
