@@ -502,7 +502,7 @@ header {
   font-size: 16px;
   font-weight: lighter;
 }
-
+/* color */
 .wrapper-price .dot-color {
   display: flex;
   justify-content: space-between;
@@ -524,6 +524,30 @@ header {
   width: 30px;
   height: 30px;
 }
+
+/* colors */
+.size-option {
+  position: relative;
+}
+
+.size-option.selected::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: red;
+  top: -2px;
+  left: 0;
+}
+
+/* Добавляем стили для точек цветов */
+.color-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+/* color */
 
 .wrapper-price .size {
   display: flex;
