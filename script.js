@@ -1,4 +1,4 @@
-const sizeOptions = document.querySelectorAll(".size-option");
+let sizeOptions = document.querySelectorAll(".size-option");
 const colorOptions = document.querySelectorAll(".color-option");
 const priceText = document.querySelector(".price p");
 const sellText = document.querySelector(".price span");
@@ -9,6 +9,15 @@ sizeOptions.forEach((sizeOption) => {
   if (sizeOption.textContent === "S") {
     sizeOption.classList.add("selected");
   }
+
+  sizeOption.addEventListener("click", function () {
+    document
+      .querySelector(".size-option.selected")
+      .classList.remove("selected");
+    this.classList.add("selected");
+    showColorsBySize(this.textContent);
+    selectedColor = null;
+  });
 });
 
 function showColorsBySize(size) {
@@ -30,7 +39,7 @@ function showColorsBySize(size) {
             dot.classList.remove("selected");
           });
           this.classList.add("selected");
-          selectedColor = this; // Update the selected color
+          selectedColor = this;
         });
         colorOption.appendChild(dot);
       });
@@ -56,19 +65,6 @@ function showColorsBySize(size) {
 }
 
 showColorsBySize("S");
-
-sizeOptions.forEach((sizeOption) => {
-  sizeOption.addEventListener("click", function () {
-    if (document.querySelector(".size-option.selected")) {
-      document
-        .querySelector(".size-option.selected")
-        .classList.remove("selected");
-    }
-    this.classList.add("selected");
-    showColorsBySize(this.textContent);
-    selectedColor = null;
-  });
-});
 
 const buyButton = document.getElementById("buyButton");
 const modal = document.getElementById("myModal");
@@ -103,7 +99,7 @@ phoneInput.addEventListener('keypress', function(e) {
 });
 
 phoneInput.addEventListener('input', function() {
-  const phoneRegex = /^[0-9()+-]*$/; // Regular expression to allow numbers, '+', '-', '(' and ')'
+  const phoneRegex = /^[0-9()+-]*$/;
   if (!phoneRegex.test(phoneInput.value)) {
     phoneInput.style.color = 'red';
   } else {
@@ -113,9 +109,9 @@ phoneInput.addEventListener('input', function() {
 
 submitBtn.addEventListener("click", function () {
   const nameInput = document.getElementById("nameInput").value;
-  const phoneRegex = /^[0-9()+-]+$/; // Regular expression to allow numbers, '+', '-', '(' and ')'
+  const phoneRegex = /^[0-9()+-]+$/; 
 
-  if (phoneRegex.test(phoneInput.value)) { // Validate phone number using regular expression
+  if (phoneRegex.test(phoneInput.value)) {
     selectedInfo.phone = phoneInput.value;
     selectedInfo.name = nameInput;
     console.log(selectedInfo);
