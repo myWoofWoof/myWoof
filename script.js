@@ -2,6 +2,11 @@ const sizeOptions = document.querySelectorAll(".size-option");
 const colorOptions = document.querySelectorAll(".color-option");
 const priceText = document.querySelector(".price p");
 const sellText = document.querySelector(".price span");
+const buyButton = document.getElementById("buyButton");
+const modal = document.getElementById("myModal");
+const closeBtn = modal.querySelector(".close");
+const submitBtn = modal.querySelector("#submitBtn");
+
 let selectedColor = null;
 let selectedInfo = {};
 
@@ -70,11 +75,6 @@ sizeOptions.forEach((sizeOption) => {
   });
 });
 
-const buyButton = document.getElementById("buyButton");
-const modal = document.getElementById("myModal");
-const closeBtn = modal.querySelector(".close");
-const submitBtn = modal.querySelector("#submitBtn");
-
 buyButton.addEventListener("click", function () {
   modal.style.display = "block";
   const selectedSize = document.querySelector(".size-option.selected");
@@ -106,20 +106,28 @@ phoneInput.addEventListener('input', function() {
   if (!phoneRegex.test(phoneInput.value)) {
     phoneInput.style.color = 'red';
   } else {
-    phoneInput.style.color = 'black';
+    // phoneInput.style.color = 'black';
   }
 });
-
 submitBtn.addEventListener("click", function () {
   const nameInput = document.getElementById("nameInput").value;
   const phoneRegex = /^[0-9()+-]+$/;
 
-  if (phoneRegex.test(phoneInput.value)) {
+  if (nameInput.trim() === "" || !phoneRegex.test(phoneInput.value)) {
+    if (nameInput.trim() === "") {
+      document.getElementById("nameInput").style.borderColor = "red";
+    } else {
+      document.getElementById("nameInput").style.borderColor = "";
+    }
+    if (!phoneRegex.test(phoneInput.value)) {
+      phoneInput.style.borderColor = "red";
+    } else {
+      phoneInput.style.borderColor = "";
+    }
+  } else {
     selectedInfo.phone = phoneInput.value;
     selectedInfo.name = nameInput;
     console.log(selectedInfo);
     modal.style.display = "none";
-  } else {
-    phoneInput.style.color = 'red';
   }
 });

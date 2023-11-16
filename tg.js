@@ -7,6 +7,9 @@ const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatid}&
 
 const request = new Request(url);
 btn.addEventListener("click", function (e) {
+  if (selectedInfo.phone === undefined || selectedInfo.name === undefined) {
+    return;
+  }
   let text =
     "Новый заказ!" +
     sep +
