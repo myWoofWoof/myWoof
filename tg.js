@@ -28,7 +28,7 @@ btn.addEventListener('click', function (e) {
         // console.log(selectedInfo,text)
 
             if (!response.ok) {
-                throw new Error('Что т опошло не так при отправке данных!')
+                throw new Error('Что-то опошло не так при отправке данных!')
             }
 
             return response.json()
