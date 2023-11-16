@@ -1,23 +1,14 @@
-let sizeOptions = document.querySelectorAll(".size-option");
+const sizeOptions = document.querySelectorAll(".size-option");
 const colorOptions = document.querySelectorAll(".color-option");
 const priceText = document.querySelector(".price p");
 const sellText = document.querySelector(".price span");
 let selectedColor = null;
-window.selectedInfo = {};
+let selectedInfo = {};
 
 sizeOptions.forEach((sizeOption) => {
   if (sizeOption.textContent === "S") {
     sizeOption.classList.add("selected");
   }
-
-  sizeOption.addEventListener("click", function () {
-    document
-      .querySelector(".size-option.selected")
-      .classList.remove("selected");
-    this.classList.add("selected");
-    showColorsBySize(this.textContent);
-    selectedColor = null;
-  });
 });
 
 function showColorsBySize(size) {
@@ -66,6 +57,19 @@ function showColorsBySize(size) {
 
 showColorsBySize("S");
 
+sizeOptions.forEach((sizeOption) => {
+  sizeOption.addEventListener("click", function () {
+    if (document.querySelector(".size-option.selected")) {
+      document
+        .querySelector(".size-option.selected")
+        .classList.remove("selected");
+    }
+    this.classList.add("selected");
+    showColorsBySize(this.textContent);
+    selectedColor = null;
+  });
+});
+
 const buyButton = document.getElementById("buyButton");
 const modal = document.getElementById("myModal");
 const closeBtn = modal.querySelector(".close");
@@ -75,7 +79,6 @@ buyButton.addEventListener("click", function () {
   modal.style.display = "block";
   const selectedSize = document.querySelector(".size-option.selected");
   const selectedColorOption = document.querySelector(".color-option[data-size='" + selectedSize.textContent + "'] .color-dot.selected");
-
 
   selectedInfo = {
     title: "Поводок My Woof",
@@ -109,7 +112,7 @@ phoneInput.addEventListener('input', function() {
 
 submitBtn.addEventListener("click", function () {
   const nameInput = document.getElementById("nameInput").value;
-  const phoneRegex = /^[0-9()+-]+$/; 
+  const phoneRegex = /^[0-9()+-]+$/;
 
   if (phoneRegex.test(phoneInput.value)) {
     selectedInfo.phone = phoneInput.value;
