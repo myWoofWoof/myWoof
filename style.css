@@ -207,6 +207,10 @@ header {
   justify-content: space-between;
 }
 
+.menu a {
+  color: var(--color-gray);
+}
+
 .super {
   font-family: var(--font-roboto);
   font-size: 16px;
@@ -332,6 +336,23 @@ header {
   font-family: var(--font-roboto);
   font-weight: 400;
   cursor: pointer;
+  position: relative;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  z-index: -1;
+  top: 50px;
+  width: 60%;
+  margin: 0 auto;
+  padding: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 1px #8d8d8d;
 }
 
 .rescueMechanism {
@@ -850,24 +871,18 @@ input[type="text"] {
 
 .friendly .insta .insta-wrap .insta-img {
   max-width: 250px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   position: relative;
 }
 
-.friendly .insta .insta-wrap::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 0;
-  z-index: -1;
-  top: 86px;
-  width: 60%;
+.hr-washed {
+	margin: 20px 0;
+	padding: 0;
+	height: 0;
+	border: none;
+	box-shadow: 0 0 10px 1px #8d8d8d;
+  width: 80%;
   margin: 0 auto;
-  padding: 0;
-  border-radius: 50%;
-  box-shadow: 0 0 10px 1px #8d8d8d;
 }
 
 .partners .list .partners-img {
