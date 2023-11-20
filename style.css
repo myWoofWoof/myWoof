@@ -46,6 +46,7 @@
 
 a {
   text-decoration: none;
+  color: white;
 }
 
 .fullLogo {
@@ -100,6 +101,55 @@ header {
   max-width: 200px;
   width: 100%;
 }
+
+.msg-width-primary::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  z-index: -1;
+  top: 70px;
+  width: 60%;
+  margin: 0 auto;
+  padding: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 1px #8d8d8d;
+}
+
+.right::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  z-index: -1;
+  top: 86px;
+  width: 60%;
+  margin: 0 auto;
+  padding: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 1px #8d8d8d;
+}
+
+.right-before::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  z-index: -1;
+  top: 105px;
+  width: 60%;
+  margin: 0 auto;
+  padding: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 1px #8d8d8d;
+}
+
 .othercases-left-3 {
   max-width: 260px;
   width: 100%;
@@ -361,7 +411,7 @@ header {
 
 .free div {
   margin: 0 auto;
-  max-width: 1000px;
+  max-width: 1200px;
   width: 100%;
 }
 
@@ -395,6 +445,7 @@ header {
   font-size: 14px;
   font-family: var(--font-roboto);
   font-weight: 300;
+  position: relative;
 }
 
 /* .cases{
@@ -659,6 +710,7 @@ input[type="text"] {
   padding: 50px 0;
   align-items: center;
   background: url("./img/happy_story_dogs.png") center / cover no-repeat;
+  z-index: 0;
 }
 .happy-story::before {
   content: "";
@@ -796,9 +848,26 @@ input[type="text"] {
   font-weight: 600;
 }
 
-.friendly .insta .insta-img {
+.friendly .insta .insta-wrap .insta-img {
   max-width: 250px;
   margin-bottom: 50px;
+  position: relative;
+}
+
+.friendly .insta .insta-wrap::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  z-index: -1;
+  top: 86px;
+  width: 60%;
+  margin: 0 auto;
+  padding: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 1px #8d8d8d;
 }
 
 .partners .list .partners-img {
