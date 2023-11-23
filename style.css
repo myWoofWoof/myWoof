@@ -951,7 +951,8 @@ footer .license {
   padding: 40px 20px;
 }
 .side-title {
-  font-size: 20px;
+  font-size: 30px;
+  font-family: var(--font-roboto);
   padding-bottom: 10px;
   margin-bottom: 20px;
   border-bottom: 2px solid #bfe2ff;
@@ -1046,4 +1047,17 @@ footer .license {
 .side-button-2:hover {
   transform: rotate(45deg) scale(1.1);
   color: #fff;
+}
+.side-panel .menu-side-mobile{
+    display: flex;
+    margin-top: 200px;
+    flex-direction: column;
+    /* text-align: center; */
+    font-family: var(--font-roboto);
+    
+}
+.side-panel .menu-side-mobile a{
+    font-size: 20px;
+    line-height: 50px;
+   
 }
