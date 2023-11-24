@@ -7,6 +7,8 @@
     rgba(53, 56, 63, 1) 100%
   );
 
+  --color-blue: rgb(51, 61, 96);
+
   --font-roboto: "Roboto", sans-serif;
 }
 
@@ -40,8 +42,14 @@
 
 * {
   box-sizing: border-box;
-  margin: 0;
+  margin: 10px 0 0 0;
   padding: 0;
+}
+
+@media (max-width: 600px) {
+  * {
+    margin: 0;
+  }
 }
 
 a {
@@ -72,6 +80,10 @@ header {
     justify-content: space-between;
     width: 100%;
     min-width: 0;
+    position: fixed;
+    top: 0;
+    background: white;
+    z-index: 2;
   }
   .menu {
     display: none !important;
@@ -163,7 +175,7 @@ header {
   flex-wrap: wrap;
   max-width: 700px;
   width: 100%;
-  margin: 20px auto;
+  margin: 70px auto;
   min-width: 100px;
 }
 @media (max-width: 600px) {
@@ -225,6 +237,7 @@ header {
   font-weight: 800;
   letter-spacing: -4.5px;
   /* font-size: 150px; */
+  line-height: 120px;
   font-size: 800%;
   margin: 0;
   max-width: 700px;
@@ -275,11 +288,12 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* margin-top: 70px; */
 }
 
 .solution {
   text-align: center;
-  margin: 0 auto;
+  margin: 10px auto;
 }
 
 .solution p {
@@ -296,8 +310,8 @@ header {
 }
 
 .circle-min {
-  width: 150px;
-  height: 150px;
+  width: 140px;
+  height: 140px;
 }
 
 .circle-max {
@@ -360,7 +374,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 70px;
+  margin-top: 140px;
   flex-wrap: wrap;
 }
 @media (max-width: 1150px) {
@@ -404,6 +418,7 @@ header {
   font-size: 70px;
   margin: 20px 0;
   line-height: 141.4%;
+  color: var(--color-blue);
 }
 
 .doggy {
@@ -425,7 +440,7 @@ header {
 .free {
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
-  font-size: 10vw;
+  font-size: 13vw;
   line-height: 75.9%;
   letter-spacing: -4.5px;
   color: #f0f1f3;
@@ -490,6 +505,8 @@ header {
   justify-content: space-between;
   /* margin: 70px 0; */
   padding: 120px;
+  max-width: 1650px;
+  margin: 0 auto;
 }
 
 .d-none-desktop {
@@ -654,8 +671,8 @@ header {
 /* Modal Content/Box */
 .modal-content {
   max-width: 550px;
-  width: 70%;
-  margin: 15% auto;
+  width: 100%;
+  margin: 60% auto;
   padding: 20px;
   border: 1px solid #888;
   background-color: #fefefe;
@@ -756,6 +773,7 @@ input[type="text"] {
   font-size: 70px;
   text-align: center;
   margin: 50px 0;
+  color: var(--color-blue);
 }
 /* .happy-story .stories {
     display: flex;
@@ -822,6 +840,7 @@ input[type="text"] {
   font-size: 70px;
   text-align: center;
   margin: 50px 0 20px 0;
+  color: var(--color-blue);
 }
 @media (max-width: 900px) {
   .video .title,
@@ -868,6 +887,7 @@ input[type="text"] {
   margin-top: 20px;
   font-weight: var(--font-roboto);
   font-weight: 600;
+  color: var(--color-blue);
 }
 
 .friendly .insta .insta-wrap .insta-img {
@@ -877,13 +897,12 @@ input[type="text"] {
 }
 
 .hr-washed {
-	margin: 20px 0;
 	padding: 0;
 	height: 0;
 	border: none;
 	box-shadow: 0 0 10px 1px #8d8d8d;
-  width: 80%;
-  margin: 0 auto;
+  width: 45%;
+  margin: 0px auto 30px auto;
 }
 
 .partners .list .partners-img {
