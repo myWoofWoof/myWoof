@@ -6,6 +6,7 @@ const buyButton = document.getElementById("buyButton");
 const modal = document.getElementById("myModal");
 const closeBtn = modal.querySelector(".close");
 const submitBtn = modal.querySelector("#submitBtn");
+const btnScroll = document.querySelector(".stt");
 
 let selectedColor = null;
 let selectedInfo = {};
@@ -131,3 +132,11 @@ submitBtn.addEventListener("click", function () {
     modal.style.display = "none";
   }
 });
+
+document.addEventListener('scroll', function(event) {
+  if(document.documentElement.scrollTop > 600){
+    btnScroll.hidden = false
+  }else{
+    btnScroll.hidden = true
+  }
+})
