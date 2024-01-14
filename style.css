@@ -277,7 +277,7 @@ header {
 }
 
 @media (max-width: 1020px) {
-  .description {
+  .description-mob {
     margin-bottom: 100px;
   }
 }
@@ -298,7 +298,7 @@ header {
 }
 
 @media (max-width: 1020px) {
-  .circle {
+  .circle-main {
     margin-top: 100px;
   }
 }
@@ -392,6 +392,7 @@ header {
 @media (max-width: 1150px) {
   .rescueMechanism {
     justify-content: center;
+    margin-top: 0;
     gap: 20px;
   }
 }
@@ -401,6 +402,12 @@ header {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+}
+
+@media (max-width: 1020px) {
+  .benefits {
+    margin-left: 20%;
+  }
 }
 
 .benefits p:last-child {
@@ -479,7 +486,7 @@ header {
 
 .line {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .line .icon p:last-child {
@@ -536,6 +543,9 @@ header {
   .superhero {
     text-align: center;
     margin-top: 100px;
+  }
+  .superhero-main {
+    margin-top: 250px;
   }
   .product-img {
     width: 100%;
