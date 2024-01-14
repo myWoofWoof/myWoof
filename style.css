@@ -276,6 +276,12 @@ header {
   line-height: 141.4%;
 }
 
+@media (max-width: 1020px) {
+  .description {
+    margin-bottom: 100px;
+  }
+}
+
 .circle {
   border-radius: 50%;
   width: 400px;
@@ -289,6 +295,12 @@ header {
   justify-content: center;
   align-items: center;
   /* margin-top: 70px; */
+}
+
+@media (max-width: 1020px) {
+  .circle {
+    margin-top: 100px;
+  }
 }
 
 .solution {
@@ -523,6 +535,7 @@ header {
 
   .superhero {
     text-align: center;
+    margin-top: 100px;
   }
   .product-img {
     width: 100%;
