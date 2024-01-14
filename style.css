@@ -84,6 +84,7 @@ header {
     top: 0;
     background: white;
     z-index: 2;
+    border-bottom: 1px solid gray;
   }
   .menu {
     display: none !important;
@@ -190,7 +191,7 @@ header {
 }
 
 .myWoof-img {
-  width: 30%;
+  width: 20%;
   object-fit: cover;
   height: 100%;
 }
