@@ -40,6 +40,11 @@
   margin: 0 auto;
 }
 
+.main-max {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
 * {
   box-sizing: border-box;
   margin: 10px 0 0 0;
@@ -124,7 +129,7 @@ header {
   right: 0;
   height: 0;
   z-index: -1;
-  top: 70px;
+  top: 65px;
   width: 60%;
   margin: 0 auto;
   padding: 0;
@@ -156,7 +161,7 @@ header {
   right: 0;
   height: 0;
   z-index: -1;
-  top: 105px;
+  top: 100px;
   width: 60%;
   margin: 0 auto;
   padding: 0;
@@ -353,14 +358,14 @@ header {
     rgba(189, 215, 255, 1) 0%,
     rgba(251, 144, 155, 1) 100%
   );
-  border-radius: 20px;
-  padding: 10px 20px;
+  border-radius: 30px;
+  padding: 20px 30px;
   border: none;
   color: white;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 14px;
+  font-size: 16px;
   font-family: var(--font-roboto);
   font-weight: 400;
   cursor: pointer;
@@ -589,7 +594,7 @@ header {
   font-size: 25px;
 }
 .stars .review p {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 500;
   margin: 0px 20px 0 5px;
   color: var(--color-gray);
@@ -985,21 +990,33 @@ footer .license {
   z-index: 999999;
   top: 0;
   left: -360px;
-  background: #337ab7;
-  transition: all 0.5s;
+  /* background: #337AB7; */
+  background: linear-gradient( 60deg, rgba(189, 215, 255, 1) 0%, rgba(251, 144, 155, 1) 100% );
+  opacity: 0.9;
+  transition: all 0.5s;   
   width: 320px;
   height: 100vh;
-  box-shadow: 10px 0 20px rgba(0, 0, 0, 0.4);
-  color: #fff;
+  box-shadow: 10px 0 20px rgba(0,0,0,0.4);
+  color: #FFF;
   padding: 40px 20px;
 }
-.side-title {
+.menu-side-mobile{
+  display: flex;
+  flex-direction: column;
+  top: 50%;
+  transform: translateY(-50%);
+  position: relative;
+}
+.menu-side-mobile a {
   font-size: 30px;
-  font-family: var(--font-roboto);
+  margin-top: 20px;
+}
+/* .side-title {
+  font-size: 25px;
   padding-bottom: 10px;
   margin-bottom: 20px;
-  border-bottom: 2px solid #bfe2ff;
-}
+  border-bottom: 2px solid #BFE2FF;
+} */
 /* Оформление кнопки на странице */
 .side-button-1-wr {
   text-align: center; /* Контейнер для кнопки, чтобы было удобнее ее разместить */
@@ -1014,18 +1031,18 @@ footer .license {
   font-size: 20px;
   line-height: 20px;
   padding: 12px 30px;
-  color: #fff;
+  color: #FFF;
   font-weight: bold;
-  text-transform: uppercase;
-  font-family: "Roboto", Тahoma, sans-serif;
-  background: #337ab7;
-  cursor: pointer;
-  border: 2px solid #bfe2ff;
+  text-transform: uppercase; 
+  font-family: 'Roboto', Тahoma, sans-serif;
+  background: #337AB7;
+  cursor: pointer; 
+  border: 2px solid #BFE2FF;
 }
 .side-button-1 .side-b:hover,
 .side-button-1 .side-b:active,
 .side-button-1 .side-b:focus {
-  color: #fff;
+  color: #FFF;
 }
 .side-button-1 .side-b:after,
 .side-button-1 .side-b:before {
@@ -1037,10 +1054,7 @@ footer .license {
   transition: all 280ms ease-in-out;
   width: 0;
 }
-/* .side-button-1 .side-open:after,
-.side-button-1 .side-open:before {
-  background: green;
-} */
+
 .side-button-1 .side-close:after,
 .side-button-1 .side-close:before {
   background: red;
@@ -1057,18 +1071,10 @@ footer .license {
 .side-button-1 .side-close {
   display: none;
 }
-#side-checkbox:checked
-  + .side-panel
-  + .side-button-1-wr
-  .side-button-1
-  .side-open {
+#side-checkbox:checked + .side-panel + .side-button-1-wr .side-button-1 .side-open {
   display: none;
 }
-#side-checkbox:checked
-  + .side-panel
-  + .side-button-1-wr
-  .side-button-1
-  .side-close {
+#side-checkbox:checked + .side-panel + .side-button-1-wr .side-button-1 .side-close {
   display: block;
 }
 #side-checkbox:checked + .side-panel {
@@ -1076,34 +1082,23 @@ footer .license {
 }
 /* Оформление кнопки на панеле */
 .side-button-2 {
-  font-size: 30px;
-  border-radius: 20px;
+  font-size: 60px;
+  border-radius: 60px;
   position: absolute;
   z-index: 1;
   top: 8px;
   right: 8px;
   cursor: pointer;
   transform: rotate(45deg);
-  color: #bfe2ff;
-  transition: all 280ms ease-in-out;
+  color: #ffffff;    
+  transition: all 280ms ease-in-out;    
 }
 .side-button-2:hover {
-  transform: rotate(45deg) scale(1.1);
-  color: #fff;
+  transform: rotate(45deg) scale(1.1);    
+  color: #FFF;
 }
-.side-panel .menu-side-mobile{
-    display: flex;
-    margin-top: 200px;
-    flex-direction: column;
-    /* text-align: center; */
-    font-family: var(--font-roboto);
-    
-}
-.side-panel .menu-side-mobile a{
-    font-size: 20px;
-    line-height: 50px;
-   
-}
+
+
 
 
 
